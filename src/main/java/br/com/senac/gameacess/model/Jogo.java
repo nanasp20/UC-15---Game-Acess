@@ -11,6 +11,7 @@ public class Jogo {
     private String classificacao;
     private String descricao;
     private String imagem;
+    private int disponibilidade;
 
     public Jogo() {
     }
@@ -26,6 +27,7 @@ public class Jogo {
         this.classificacao = classificacao;
         this.descricao = descricao;
         this.imagem = imagem;
+        this.disponibilidade = disponibilidade;
     }
 
   
@@ -94,11 +96,23 @@ public class Jogo {
         this.descricao = descricao;
     }
 
-    public String getImagem() {
-        return imagem;
-    }
-
     public void setImagem(String imagem) {
         this.imagem = imagem;
     }
+    public int getDisponibilidade() {
+    return disponibilidade;
 }
+
+public void setDisponibilidade(int disponibilidade) {
+    this.disponibilidade = disponibilidade;
+}
+
+    public String getImagem() {
+    return imagem;
+}
+
+
+}
+
+
+

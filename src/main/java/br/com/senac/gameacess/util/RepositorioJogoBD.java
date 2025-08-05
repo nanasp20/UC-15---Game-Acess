@@ -26,7 +26,8 @@ public class RepositorioJogoBD {
                 jogo.setDataLancamento(rs.getString("data_lancamento"));
                 jogo.setDescricao(rs.getString("descricao"));
                 jogo.setImagem(rs.getString("imagem")); 
-               
+                jogo.setDisponibilidade(rs.getInt("disponibilidade"));
+                
                 jogos.add(jogo);
             }
 

@@ -265,7 +265,24 @@ public class TelaDetalheJogo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAlugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlugarActionPerformed
-        dispose();
+        if (jogo.getDisponibilidade() == 0) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Este jogo já está alugado.");
+        return;
+    }
+
+    br.com.senac.gameacess.util.JogoDAO dao = new br.com.senac.gameacess.util.JogoDAO();
+    boolean sucesso = dao.atualizarDisponibilidade(jogo.getId(), 0);
+
+    if (sucesso) {
+        jogo.setDisponibilidade(0);
+        btnAlugar.setText("ALUGADO");
+        btnAlugar.setBackground(java.awt.Color.GRAY);
+        btnAlugar.setEnabled(false);
+        javax.swing.JOptionPane.showMessageDialog(this, "Jogo alugado com sucesso!");
+    } else {
+        javax.swing.JOptionPane.showMessageDialog(this, "Erro ao alugar o jogo.");
+    }
+    dispose();
     }//GEN-LAST:event_btnAlugarActionPerformed
 
     /**

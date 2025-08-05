@@ -10,6 +10,7 @@ br\com\senac\gameacess\model\Usuario.class
 br\com\senac\gameacess\telas\TelaDetalheJogo$1.class
 br\com\senac\gameacess\telas\TelaLogin$4.class
 br\com\senac\gameacess\telas\TelaMenuPrincipal.class
+br\com\senac\gameacess\util\JogoDAO.class
 br\com\senac\gameacess\telas\TelaCadastro$1.class
 br\com\senac\gameacess\telas\TelaMenuPrincipal$1.class
 br\com\senac\gameacess\util\Conexao.class
